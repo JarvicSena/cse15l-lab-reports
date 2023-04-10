@@ -20,6 +20,7 @@ Now that you have VScode, if you have windows, you want to download git for wind
 
 ## Part 3: Running Some Commands
 Now that you are logged in remotely and ssh'd, you can now run some commands on the remote computer. You can run commands on the remote computer by using *cd*, *ls*, *pwd*, *mkdir*, and *cp* in VScode or on your computer's command prompt. Here's what I ran. You can do the same to see if it works!
+
 ![image](https://user-images.githubusercontent.com/130111913/230806813-18c91c49-9daf-4629-93cb-7249467c618a.png)
 ![image](https://user-images.githubusercontent.com/130111913/230806825-5f3f3ec9-dedd-4785-8e11-c10d018e7988.png)
 
