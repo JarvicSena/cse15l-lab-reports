@@ -34,6 +34,6 @@ Here, I ran both cd ~, which changes the directory to the home directory. I then
 Lastly, I ran ls -a and ls -lat. The *ls* command, aka the "List" command, lists files and folders int he given path. But because I used -a the first time, it lists *all* the files, including hidden ones. The second time, when I ran ls -lat, it also lists the files but now in a "long list style" (the l part after the dash), all the files (a), and the time in which they were edited in order from most recent to least recent from top to bottom (t). 
 
   
-To summarize, I ran *cat <filename>*, *pwd*, *cd ~*, *cd*, *ls -a*, and *ls -lat*. Of course, there are plenty of other commands and a lot more combinations of arguments you can pass in after them but these are some of the ones I tried. You can try others to ensure everything works and all your files are where they're supposed to be. 
+To summarize, I ran *cat <filename>*, *pwd*, cd ~, *cd*, *ls -a*, and *ls -lat*. Of course, there are plenty of other commands and a lot more combinations of arguments you can pass in after them but these are some of the ones I tried. You can try others to ensure everything works and all your files are where they're supposed to be. 
   
 If all your commands work, you've done it! To log out, do ```CTRL``` + ```D``` and then type ```exit``` in your terminal.
