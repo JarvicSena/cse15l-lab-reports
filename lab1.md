@@ -22,6 +22,18 @@ Now that you have VScode, if you have windows, you want to download git for wind
 Now that you are logged in remotely and ssh'd, you can now run some commands on the remote computer. You can run commands on the remote computer by using *cd*, *ls*, *pwd*, *mkdir*, and *cp* in VScode or on your computer's command prompt. Here's what I ran. You can do the same to see if it works!
 
 ![image](https://user-images.githubusercontent.com/130111913/230806813-18c91c49-9daf-4629-93cb-7249467c618a.png)
-![image](https://user-images.githubusercontent.com/130111913/230806825-5f3f3ec9-dedd-4785-8e11-c10d018e7988.png)
+Above, I ran *cat* <file1> ... which prints out the contents of the file I inputted, which is "Hello!" (without quotes). In this case, it looked at the helo.txt file inside the cs15lsp23 folder and printed its contents.
+ 
+![image](https://user-images.githubusercontent.com/130111913/234133302-ede80201-f9af-4611-9352-4e42354ad26a.png)
+Here, I used *pwd*, or, "print working directory" which displays the current working directory I am im which, in this case, is /home/linux/ieng6/oce/5k/jsenatin.
 
+![image](https://user-images.githubusercontent.com/130111913/234134082-3e2b70fe-caf6-4fc0-9413-7bd15b802224.png)
+Here, I ran both cd ~, which changes the directory to the home directory. I then just typed cd with nothing after, which doesn't change the directory technically even though *cd* means "change directory" because there's nothin after it. It is important to note that even though nothing is outputted into the terminal, the command did still run since we are allowed to type more commands after and no errors were thrown.
+
+![image](https://user-images.githubusercontent.com/130111913/234134776-ac8c3504-5ff4-4d5a-8edc-bce372ccac4a.png)
+Lastly, I ran ls -a and ls -lat. The *ls* command, aka the "List" command, lists files and folders int he given path. But because I used -a the first time, it lists *all* the files, including hidden ones. The second time, when I ran ls -lat, it also lists the files but now in a "long list style" (the l part after the dash), all the files (a), and the time in which they were edited in order from most recent to least recent from top to bottom (t). 
+
+  
+To summarize, I ran *cat <filename>*, *pwd*, *cd ~*, *cd*, *ls -a*, and *ls -lat*. Of course, there are plenty of other commands and a lot more combinations of arguments you can pass in after them but these are some of the ones I tried. You can try others to ensure everything works and all your files are where they're supposed to be. 
+  
 If all your commands work, you've done it! To log out, do ```CTRL``` + ```D``` and then type ```exit``` in your terminal.
