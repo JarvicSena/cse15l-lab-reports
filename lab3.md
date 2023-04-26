@@ -20,12 +20,34 @@ Here's two uses of ```/add-message```:
 - The method ```handle``` in the class ```MyHandler``` is being called.
 - The relevant argument to this method is ```t```, which is the link typed and is of type ```HttpExchange```
 - The values of the relevant fiels of the class are:
-  - HttpExchange t = localhost:4000//add-message?s=How are you? (the link aka the argument passed into the method)
-  - URI url = add-message?s=How are you (the part of the link that is unique and is responsible for adding the word following the query)
-  - String query = s=How are you? (the actual query)
-  - String[] word = word[0] = s; word[1] = How are you? (separates s from the query, which is How are you)
-  - message = \nHello \nHow are you? (creates a new line and then puts How are you? below Hello)
-  - response = \nHello \nHow are you? (copies message)
+  - HttpExchange t = localhost:4000//add-message?s=How are you? (the link aka the argument passed into the method. This part changes because the query is different)
+  - URI url = add-message?s=How are you (the part of the link that is unique and is responsible for adding the word following the query. This also changes because of the query)
+  - String query = s=How are you? (the actual query, which changes every time you input something after s=)
+  - String[] word = word[0] = s; word[1] = How are you? (separates s from the query, which is How are you. word[0] is always 0 but word[1] is the query so it changes after every call of the method)
+  - message = \nHello \nHow are you? (creates a new line and then puts How are you? below Hello. This changes because you are adding a new word since you used /add-message a second time)
+  - response = \nHello \nHow are you? (copies message. does't change the value of message but it is different from the first response)
 
 ## Part 2:
 
+The bug I am choosing from lab 3 is from the method ```reverseInPlace()```
+
+Here's a failure inducing input, which is an array with more than one element: 
+```
+ @Test
+  public void testReverseInPlace1() {
+    int[] input2 = {2, 4, 6};
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{6, 4, 2}, input2);
+  }
+  ```
+
+Here's an input that doesn't cause an error, because the reverse method doesn't actually reverse an array with just one element:
+```
+@Test 
+	public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+	}
+  ```
+Here's the symptoms:
