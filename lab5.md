@@ -175,5 +175,61 @@ Our output:
         Conclusion
         considering studies using NOS-deficient mice. The present
 ```
-Although this is still a long output because the text file itself is pretty long, we no longer have the empty spaces, or in this case "whitespace" lines showing up because of the regular expression ^\s*$ that we added after "a". You might also notice that we did \| after a. This is so that we can separate our arguments. We can continue to add multiple arguments by dividing them up with \| (backslash and the pipe character).
+Although this is still a long output because the text file itself is pretty long, we no longer have the empty spaces, or in this case "whitespace" lines showing up because of the regular expression ^\s*$ that we added after "a". You might also notice that we did "\|" after a. This is so that we can separate our arguments. We can continue to add multiple arguments by dividing them up with "\|" (backslash and the pipe character).
+# '-c' option
+This option returns the count (hence the c) of lines that includes the expression we input. This is a useful command-line option when we don't care about what the lines that contain our inputted text actually say and just want the number of lines that contain it.
 
+Source: en.wikibooks.org/wiki/Grep
+
+Example 1: The file we will be using is ./biomed/rr74.txt
+
+Our input:
+```
+grep -c "birth" ./biomed/rr74.txt
+```
+Our output:
+```
+3
+```
+Here, our input is "birth," so we are looking for how many lines in rr74.txt contains the word birth. Surprisingly, that word only shows up on three lines! We know this because the -c command printed 3 in our terminal.
+
+Example 2: Here, we are still using ./biomed/rr74.txt file but now we are going to be showing you how we are also able to use the pipe character as well!
+
+Our input:
+```
+grep -c "a\|e" ./biomed/rr74.txt
+```
+Our output:
+```
+371
+```
+Here, we are able to see the count of how many lines contain the letter a AND the letter e! Because of what we got, we see that there are 371 lines that contain these letters.
+# '-w' option
+The -w option is useful when you want to be specific in your search. -w allows us to search for whole words that match the search pattern (what we inputted) and not just parts of words. 
+
+Source: ChatGPT, to explain what -w did.
+        en.wikibooks.org/wiki/Grep
+        
+Example 1: The file we are using is ./911report/chapter-9.txt
+
+Our input:
+```
+grep -w "hijack"  ./911report/chapter-9.txt
+```
+Our output:
+```
+```
+Here, we actually didn't get anything returned. Why? Because in this text file, though the word hijack does appear INSIDE of the word "hijacked", it doesn't actually return any lines because we are looking for the whole word ONLY and not parts of words. Because of this, we know that the sole word "hijack" does not appear anywhere in the file.
+
+Example 2: The file we are using for this example is ./biomed/cc4.txt
+
+Our input:
+```
+grep -w "experimental" ./biomed/cc4.txt 
+```
+Our output:
+```
+       day to day [ 11]. In sheep with experimental acute lung
+          In each phase (see experimental protocol), when a
+```
+Here, we see that two lines were printed with the exact word "experimental." If we added a z at the end of the word, we would see no line being printed because there is not line that contains "experimentalz."
