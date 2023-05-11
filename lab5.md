@@ -44,3 +44,136 @@ Our output:
 ```
 Here, we see that although the inputted string we're looking is "HIJACK" in all capital letters, the file doesn't have that yet still returns the lines containing the lowercase version.
 Note that it is even returning "hijacked" because that word itself has the word "hijack" in it.
+# '-v' option
+This option is known as "inverse match." In simpler terms, this means matching all lines in a file that do NOT contain the inputted text. This is helpful when searching for lines that do not contain the unwanted text that you inputted.
+
+Source: en.wikibooks.org/wiki/Grep
+        I also used ChatGPT to ask about how to take multiple command-line arguments, which is relevant for example 2.
+
+Example 1: The file we will be using is ./biomed/rr74.txt again (again, we're assuming you're in ./technical)
+
+Our input:
+```
+grep -v "a" ./biomed/rr74.txt
+```
+Our output:
+```
+
+
+
+        Introduction
+        immunohistochemistry.
+
+
+
+          Mice
+
+
+          Exposure environments
+
+
+
+
+          Western blotting
+
+
+          with A
+          260 /A
+          diluted in depC H
+          determined using 18 S rRNA primers/probes (Applied
+          RNA.
+
+
+          Immunohistochemistry
+
+
+          2 -, NO
+          (Ionics Instrument Business Group, Boulder, CO, USA).
+
+
+          P < 0.05 is considered
+
+
+
+        Results
+
+          respectively;
+          P < 0.001).
+
+
+          Western blotting
+          As shown in Fig. 2, lung eNOS protein levels were
+
+
+          3.5-fold (Fig. 3).
+
+
+          Immunohistochemistry
+          shown).
+
+
+
+
+
+        Discussion
+        development.
+        21].
+        detection in the lungs of hypoxic, hypertensive mice.
+        flushed with 10% O
+        different species in cultures [ 31, 32, 33, 34, 35, 36, 37]
+        production of NO
+        piglets
+
+
+        Conclusion
+        considering studies using NOS-deficient mice. The present
+
+
+
+
+```
+Here, we get a long output of lines that don't contain the letter "a" which is technically what we're looking for. However, as you can see, we have a lot of empty lines that we might not care about. To solve that, we should look at our second example:
+
+Example 2: Same file as example 1, ./biomed/rr74.txt
+
+Our input:
+```
+grep -v "a\|^\s*$" ./biomed/rr74.txt
+```
+Our output:
+```
+        Introduction
+        immunohistochemistry.
+          Mice
+          Exposure environments
+          Western blotting
+          with A
+          260 /A
+          diluted in depC H
+          determined using 18 S rRNA primers/probes (Applied
+          RNA.
+          Immunohistochemistry
+          2 -, NO
+          (Ionics Instrument Business Group, Boulder, CO, USA).
+          P < 0.05 is considered
+        Results
+          respectively;
+          P < 0.001).
+          Western blotting
+          As shown in Fig. 2, lung eNOS protein levels were
+          3.5-fold (Fig. 3).
+          Immunohistochemistry
+          shown).
+        Discussion
+        development.
+        21].
+        detection in the lungs of hypoxic, hypertensive mice.
+        flushed with 10% O
+        different species in cultures [ 31, 32, 33, 34, 35, 36, 37]
+        production of NO
+        piglets
+        Conclusion
+        considering studies using NOS-deficient mice. The present
+```
+Although this is still a long output because the text file itself is pretty long, we no longer have the empty spaces, or in this case "whitespace" lines showing up because of the regular expression ^\s*$ that we added after "a". You might also notice that we did \| after a. This is so that we can separate our arguments. We can continue to add multiple arguments by dividing them up with \| (backslash and the pipe character).
+
