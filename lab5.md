@@ -232,4 +232,4 @@ Our output:
        day to day [ 11]. In sheep with experimental acute lung
           In each phase (see experimental protocol), when a
 ```
-Here, we see that two lines were printed with the exact word "experimental." If we added a z at the end of the word, we would see no line being printed because there is not line that contains "experimentalz."
+Here, we see that two lines were printed with the exact word "experimental." If we added a z at the end of the word, we would see no line being printed because there is not line that has "experimentalz" as its own, standalone word.
