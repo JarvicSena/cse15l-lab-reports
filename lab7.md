@@ -48,4 +48,11 @@ Keys pressed: <g> <i> <t> <a> <d> <d> <"> <L> <i> <s> <t> <Space> <E> <x> <a> <m
 Here, we used a sequence of git commands: git add, git commit, and git push to commit and push our changes. We first did git add "ListExamples.java" since that is the file we edited and want to push. Then we do git commit -m "Updated" to write a message into GitHub saying that we "Updated" this file. Lastly, to push all of this into our account, we do git push origin main to push into our account.
 ```
 ![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/4bae9a65-bab6-41b7-954c-7c1353412eba)
+Above is what happened in our terminal.
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/c0631fac-62da-4926-a4e5-36ff3af42fec)
+Now, here's what we should see inside the lab7 repository. "Updated" is our message right next to ListExamples.java
 
+Lastly, if you click into ListExamples.java in GitHub and scroll down the file, you should see that index2 is now there, rather than input1. We fixed the bug!
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/c411eba3-3b33-4935-96a1-695e9d15bae3)
+
+If you started a timer, now would be the time to stop it. This was the fastest way I was able to do it but I'm sure with enough practice, you can get even faster. Have fun!
