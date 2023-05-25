@@ -9,7 +9,7 @@ This option allows us to search for text like normal, but ignores uppercase lett
 where you don't care for exact matches and just want any form of the sequence of characters you are looking for. For example, inputting "bye" after -i will return all lines containing
 BYE, bYe, ByE, etc.
 
-Source: en.wikibooks.org/wiki/Grep This link takes you to a wikipedia type of page and in it shows a whole variety of command-line options for grep. I will be using this source mainly
+Source: [Wikibooks](en.wikibooks.org/wiki/Grep) This link takes you to a wikipedia type of page and in it shows a whole variety of command-line options for grep. I will be using this source mainly
 to find out most, if not, all the command-line options for grep.
 
 Example 1: The file we are using is ./biomed/rr74.txt (cd into ~/stringsearch/stringsearch-data/technical if you haven't already)
@@ -47,7 +47,7 @@ Note that it is even returning "hijacked" because that word itself has the word 
 # '-v' option
 This option is known as "inverse match." In simpler terms, this means matching all lines in a file that do NOT contain the inputted text. This is helpful when searching for lines that do not contain the unwanted text that you inputted.
 
-Source: en.wikibooks.org/wiki/Grep
+Source: [Wikibooks](en.wikibooks.org/wiki/Grep)
         I also used ChatGPT to ask about how to take multiple command-line arguments, which is relevant for example 2.
 
 Example 1: The file we will be using is ./biomed/rr74.txt again (again, we're assuming you're in ./technical)
@@ -179,7 +179,7 @@ Although this is still a long output because the text file itself is pretty long
 # '-c' option
 This option returns the count (hence the c) of lines that includes the expression we input. This is a useful command-line option when we don't care about what the lines that contain our inputted text actually say and just want the number of lines that contain it.
 
-Source: en.wikibooks.org/wiki/Grep
+Source: [Wikibooks](en.wikibooks.org/wiki/Grep)
 
 Example 1: The file we will be using is ./biomed/rr74.txt
 
@@ -208,7 +208,7 @@ Here, we are able to see the count of how many lines contain the letter a AND th
 The -w option is useful when you want to be specific in your search. -w allows us to search for whole words that match the search pattern (what we inputted) and not just parts of words. 
 
 Source: ChatGPT, to explain what -w did.
-        en.wikibooks.org/wiki/Grep
+        [Wikibooks](en.wikibooks.org/wiki/Grep)
         
 Example 1: The file we are using is ./911report/chapter-9.txt
 
@@ -233,3 +233,37 @@ Our output:
           In each phase (see experimental protocol), when a
 ```
 Here, we see that two lines were printed with the exact word "experimental." If we added a z at the end of the word, we would see no line being printed because there is not line that has "experimentalz" as its own, standalone word.
+
+# Help Using ChatGPT(OpenAI)
+With artificial intelligence starting to play a more active role in our lives, I have decided, with permission, to use it to my advantage to help me with this assignment. Here were the prompts I asked ChatGPT, which mainly asked what specific command line options did and how to return non-empty lines for the grep command in Java, alongside the answers ChatGPT gave me back.
+
+Prompt: Is there a way to use grep and not return empty lines?
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/59e71b02-b2c1-4c3a-b2ca-749c7f3cf0b0)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/cff9dfad-be0c-45b6-a7dc-c30b9739fdee)
+
+Prompt: Is there a way to use grep to take in multiple?
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/fe88c415-58ca-4704-9b50-49db74e9b049)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/08153ad0-f89f-43fa-96c1-1b9e79335b2c)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/9e928e60-742a-4b97-bd07-4fcbf4f5af19)
+
+Prompt: How do I use grep to not show empty lines?
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/72ceef79-627b-42a9-881f-8c5e12872187)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/8e88fbfc-0f16-43dc-9235-163283271c48)
+
+Prompt: Do I use single quotes or double quotes for '^$'?
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/6fd06e4f-0b51-47cb-9a84-5fe79be0ef7c)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/ac3e5ca3-1ef9-471a-ac70-7b9e1bb9042c)
+
+Prompt: The search for empty lines isnt working.
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/31b9ccb7-3c4d-451c-b158-2b9a5480f754)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/8f581fc3-621c-4ad1-9178-3912f4a4136f)
+
+All of the prompts above were mainly used for the second example I provided for the -v command line option since I was looking for an alternative way to use the command in a more practical way, which was to reduce the amount of lines outputted since, I think, we wouldn't want to include whitespaces and empty lines in our outputs. We also don't want unneccesarily long outputs so that's why I asked these prompts.
+
+Prompt: What are some command line arguments for grep that are commonly useful?
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/db7664ea-1931-4d93-b40d-63885efa0580)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/71d53940-9024-44bb-a6dc-79fa05ccb8a7)
+
+This prompt that I provided was just to find out some more command line options for grep. It gave me short descriptions of what they did which helped me choose which one I think would be useful and interesting to write with.
+
+In summary, although I did use ChatGPT, it didn't replace my work. I mainly used it as a supplement for solving problems that would've otherwise taken me tedious web searching to find an accurate answer I needed. Most of my information about every command line option mainly came from the Wikibooks source though.
