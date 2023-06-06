@@ -1,2 +1,6 @@
 ## Lab 9 (Report 5)
-# Part 1
+# Part 1 (EdStem Post)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/d545a3a0-967a-489c-a87a-91b7e542b85c)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/0f7ca24d-e889-4c0f-aa4c-6d2d2d8316bc)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/3ad625a4-ad8c-4da9-8a7c-6c71076052f0)
+![image](https://github.com/JarvicSena/cse15l-lab-reports/assets/130111913/2f99dd96-6d12-4719-b08f-33ff819b8fe4)
